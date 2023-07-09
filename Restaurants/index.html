@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+	 <head>
+	 
+		 <!--- TÍTULO --->
+		 <title>Restaurantes</title>
+		 
+		 <!--- CHARSET --->
+		 <meta charset="utf-8">
+		 
+		 <!-- CSS -->
+		 <link rel="stylesheet" href="css/style.css">
+		 
+		 <!-- CSS - BOOTSTRAP -->
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		 <!-- JQUERY -->
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		 <!-- BOOTSTRAP -->
+		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		 
+		 <!-- FAVICON --->
+		 <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+		 
+		 <!-- ICONE DA BARRA DE PESQUISA --->
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		 
+		 <!-- JAVA SCRIPT -->
+		 <script>
+			
+
+			 var data = {"restaurant":[ +
+			 {"name":"Restaurante1", "cover":"A", "distance":20, "rate":"XX" }, +
+			 {"name":"Restaurante2","rate":"XXX" }, +
+			 {"name":"Restaurante3","rate":"XXXX"}]};
+
+
+			 obj = JSON.parse(data);
+
+			 document.getElementById("nome").innerHTML = obj.restaurant.name;
+			 
+			 
+		 </script>
+		 
+	 </head>
+	 
+	 <!--- BODY --->
+	 <body>
+	 
+		 <!--- MENU --->
+		 <nav>
+			 <div class="container-fluid"> 
+				 <div class="row">
+					 <div class="col-md-12">
+						 <div>
+							 <ul>
+								 <li><img src="img/logo.jpg" class="img-responsive" height="50" width="50"></li>
+								 <li><a href="index.html">HOME</a></li>
+								 <li><a href="galeria.html">GALERIA</a></li>
+								 <li><a href="saibamais.html">SAIBA MAIS</a></li>
+							 </ul>
+						 </div>
+					 </div>
+				 </div>
+			 </div>
+		 </nav>
+		 
+		 <!--- CORPO --->
+		 <div id="block_01" class="container-fluid">
+		     <div id="block_02">
+				 <div id="title">
+					 <div class="row">
+						 <div class="col-md-12">
+							 <h2> Restaurantes </h2>
+						 </div>
+					 </div>
+				 </div>
+				 <div class="row space">
+					 <div class="col-md-1">
+				 
+					 </div>
+					 <!--- PRINCIPAL --->
+					 <div class="col-md-10">
+						 <div id="block_03">
+							 <div class="row space">
+								 <div class="col-md-12">
+								     <!--- BARRA DE PESQUISA --->
+									 <form class="search">				 
+										 <div>
+											 <input type="text" placeholder="Procurar..." name="search_text">
+											 <button type="submit" onclick="filter()"><i class="fa fa-search"></i></button>
+										 </div> 
+									 </form>
+								 </div>
+							 </div>									 
+							 <!--- LINHA 01 --->
+							 <div class="row space">
+								 <!--- RESTAURANTE 01 --->
+								 <div class="col-md-6">				 
+									 <div class="restaurant">
+										 <div class="row">
+										     <div class="col-md-4">
+												 <span id="cover_img">
+											 </div>
+											 <div class="col-md-8">
+												 <div>
+													 <label>Nome:</label><label id="nome"></label>									 
+												 </div>
+												 <div>
+													 <label>Tipo:</label><label id="food_type"></label>			 
+												 </div>
+												 <div>
+													 <label>Rate:</label><label id="rate"></label>	 
+												 </div>
+												 <div>
+													 <label>Dist:</label><label id="distance"></label>
+												 </div>
+											 </div>
+										 </div>
+									 </div>
+								 </div>								 
+								 <!--- RESTAURANTE 02 --->
+								 <div class="col-md-6">									 
+									 <div class="restaurant">
+										 <div class="row">
+											 <div class="col-md-4">
+												 <span id="cover_img">
+											 </div>
+											 <div class="col-md-8">
+												 <div>
+													 <label>Nome:</label><label id="restaurant_name_2"></label>									 
+												 </div>
+												 <div>
+													 <label>Tipo:</label><label id="food_type_2"></label>			 
+												 </div>
+												 <div>
+													 <label>Rate:</label><label id="rate_2"></label>	 
+												 </div>
+												 <div>
+													 <label>Dist:</label><label id="distance_2"></label>
+												 </div>
+											 </div>
+										 </div>
+									 </div>
+								 </div>
+							 </div>
+							 <!--- LINHA 02 --->
+							 <div class="row space">
+								 <!--- RESTAURANTE 03 --->
+								 <div class="col-md-6">				 
+									 <div class="restaurant">
+										 <div class="row">
+										     <div class="col-md-4">
+												 <span id="cover_img">
+											 </div>
+											 <div class="col-md-8">
+												 <div>
+													 <label>Nome:</label><label id="restaurant_name_3"></label>									 
+												 </div>
+												 <div>
+													 <label>Tipo:</label><label id="food_type_3"></label>			 
+												 </div>
+												 <div>
+													 <label>Rate:</label><label id="rate_3"></label>	 
+												 </div>
+												 <div>
+													 <label>Dist:</label><label id="distance_3"></label>
+												 </div>
+											 </div>
+										 </div>
+									 </div>
+								 </div>								 
+								 <!--- RESTAURANTE 04 --->
+								 <div class="col-md-6">									 
+									 <div class="restaurant">
+										 <div class="row">
+											 <div class="col-md-4">
+												 <span id="cover_img">
+											 </div>
+											 <div class="col-md-8">
+												 <div>
+													 <label>Nome:</label><label id="restaurant_name_4"></label>									 
+												 </div>
+												 <div>
+													 <label>Tipo:</label><label id="food_type_4"></label>			 
+												 </div>
+												 <div>
+													 <label>Rate:</label><label id="rate_4"></label>	 
+												 </div>
+												 <div>
+													 <label>Dist:</label><label id="distance_4"></label>
+												 </div>
+											 </div>
+										 </div>
+									 </div>
+								 </div>
+							 </div>
+							 <!--- LINHA 03 --->
+							 <div class="row space">
+								 <!--- RESTAURANTE 05 --->
+								 <div class="col-md-6">				 
+									 <div class="restaurant">
+										 <div class="row">
+										     <div class="col-md-4">
+												 <span id="cover_img">
+											 </div>
+											 <div class="col-md-8">
+												 <div>
+													 <label>Nome:</label><label id="restaurant_name_5"></label>									 
+												 </div>
+												 <div>
+													 <label>Tipo:</label><label id="food_type_5"></label>			 
+												 </div>
+												 <div>
+													 <label>Rate:</label><label id="rate_5"></label>	 
+												 </div>
+												 <div>
+													 <label>Dist:</label><label id="distance_5"></label>
+												 </div>
+											 </div>
+										 </div>
+									 </div>
+								 </div>								 
+								 <!--- RESTAURANTE 06 --->
+								 <div class="col-md-6">									 
+									 <div class="restaurant">
+										 <div class="row">
+											 <div class="col-md-4">
+												 <span id="cover_img">
+											 </div>
+											 <div class="col-md-8">
+												 <div>
+													 <label>Nome:</label><label id="restaurant_name_6"></label>									 
+												 </div>
+												 <div>
+													 <label>Tipo:</label><label id="food_type_6"></label>			 
+												 </div>
+												 <div>
+													 <label>Rate:</label><label id="rate_6"></label>	 
+												 </div>
+												 <div>
+													 <label>Dist:</label><label id="distance_6"></label>
+												 </div>
+											 </div>
+										 </div>
+									 </div>
+								 </div>
+							 </div>
+							 <!--- LINHA 04 --->
+							 <div class="row space">
+								 <!--- RESTAURANTE 07 --->
+								 <div class="col-md-6">				 
+									 <div class="restaurant">
+										 <div class="row">
+										     <div class="col-md-4">
+												 <span id="cover_img">
+											 </div>
+											 <div class="col-md-8">
+												 <div>
+													 <label>Nome:</label><label id="restaurant_name_7"></label>									 
+												 </div>
+												 <div>
+													 <label>Tipo:</label><label id="food_type_7"></label>			 
+												 </div>
+												 <div>
+													 <label>Rate:</label><label id="rate_7"></label>	 
+												 </div>
+												 <div>
+													 <label>Dist:</label><label id="distance_7"></label>
+												 </div>
+											 </div>
+										 </div>
+									 </div>
+								 </div>								 
+								 <!--- RESTAURANTE 08 --->
+								 <div class="col-md-6">									 
+									 <div class="restaurant">
+										 <div class="row">
+											 <div class="col-md-4">
+												 <span id="cover_img">
+											 </div>
+											 <div class="col-md-8">
+												 <div>
+													 <label>Nome:</label><label id="restaurant_name_8"></label>									 
+												 </div>
+												 <div>
+													 <label>Tipo:</label><label id="food_type_8"></label>			 
+												 </div>
+												 <div>
+													 <label>Rate:</label><label id="rate_8"></label>	 
+												 </div>
+												 <div>
+													 <label>Dist:</label><label id="distance_8"></label>
+												 </div>
+											 </div>
+										 </div>
+									 </div>
+								 </div>
+							 </div>
+							 <!--- LINHA 05 --->
+							 <div class="row space">
+								 <!--- RESTAURANTE 09 --->
+								 <div class="col-md-6">				 
+									 <div class="restaurant">
+										 <div class="row">
+										     <div class="col-md-4">
+												 <span id="cover_img">
+											 </div>
+											 <div class="col-md-8">
+												 <div>
+													 <label>Nome:</label><label id="restaurant_name_9"></label>									 
+												 </div>
+												 <div>
+													 <label>Tipo:</label><label id="food_type_9"></label>			 
+												 </div>
+												 <div>
+													 <label>Rate:</label><label id="rate_9"></label>	 
+												 </div>
+												 <div>
+													 <label>Dist:</label><label id="distance_9"></label>
+												 </div>
+											 </div>
+										 </div>
+									 </div>
+								 </div>								 
+								 <!--- RESTAURANTE 10 --->
+								 <div class="col-md-6">									 
+									 <div class="restaurant">
+										 <div class="row">
+											 <div class="col-md-4">
+												 <span id="cover_img">
+											 </div>
+											 <div class="col-md-8">
+												 <div>
+													 <label>Nome:</label><label id="restaurant_name_10"></label>									 
+												 </div>
+												 <div>
+													 <label>Tipo:</label><label id="food_type_10"></label>			 
+												 </div>
+												 <div>
+													 <label>Rate:</label><label id="rate_10"></label>	 
+												 </div>
+												 <div>
+													 <label>Dist:</label><label id="distance_10"></label>
+												 </div>
+											 </div>
+										 </div>
+									 </div>
+								 </div>
+							 </div>
+							 <!-- FIM RESTAURANTES --->
+						 </div>
+					 </div>
+				 </div>
+			 </div>
+		 </div>
+		 <div class="col-md-1">
+				 
+		 </div>
+		 <!--- RODAPÉ --->
+		 <div class="container-fluid">
+			 <div class="row">
+				 <div class="col-md-12">
+				     <div class="footer">
+						 <label>Copryght &copy;<label>
+					 </div>
+				 </div>
+			 </div>
+		 </div>
+		 <!--- FIM RODAPÉ --->
+	 </body>
+</html>

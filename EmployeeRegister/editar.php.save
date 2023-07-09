@@ -1,0 +1,39 @@
+<?php
+
+$servername = "localhost";
+$username = "lucas";
+$password = "1q2w3e";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=INTERNAL_MANAGEMENT", $username, $password);
+
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+
+$sql = $conn->prepare("SELECT * FROM USERS");
+$sql->execute();
+
+$rows = $sql->fetchAll(PDO::FETCH_CLASS);
+
+print_r($rows);
+
+$conn->close();
+
+
+echo "<table><th><td>ID</td><td>Nome de Usuario</td><td>Login</td><td>Email</td></th>";
+
+
+
+foreach($rows as $row)
+{
+	
+}
+
+echo "</table>"
+
+?>
+

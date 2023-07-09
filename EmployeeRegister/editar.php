@@ -1,0 +1,72 @@
+<?php
+
+if(isset($_GET['id']))
+{
+$id = $_GET['id'];
+}
+else
+{
+header("Location: index.php");
+}
+
+session_start();
+
+$sql = $conn->prepare("SELECT USERS.USERID as id, USERS.USERNAME as nome, USERS.USERLOGIN as login, SECTORS.SECTORNAME as nome_setor FROM USERS INNER JOIN SECTORS ON USERS.USERSECTORID = SECTORS.SECTORID WHERE USERS.USERID = " . $id);
+$sql->execute();
+$user = $sql->fetchAll(PDO::FETCH_CLASS);
+
+$sql = $conn->prepare("SELECT * FROM SECTORS");
+$sql->execute();
+$setores = $sql->fetchAll(PDO::FETCH_CLASS);
+
+$user_nome = $user[0]->nome;
+$user_setor = $user[0]->nome_setor;
+
+$_SESSION['user_nome'] = $user_nome;
+
+?>
+
+<html>
+<head>
+
+<title>Alterar Setor</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<form method='get' action=''>
+
+<h2>Você está alterando o setor de <b> <?php echo $user_nome; ?></b></h2>
+
+<div class="form-group">
+<label>Seu altual setor é: <?php echo $user_setor ?></label>
+</div>
+
+<div class="form-group">
+<label for='setor'>Seu novo setor será:</label> <select id='setor' name='setor' class='form-group'>
+<?php foreach($setores as $setor)
+{
+   echo "<option class='form-group' value=" . $setor->SECTORID ." > " . $setor->SECTORNAME . "</option>";
+}
+?>
+</select>
+</div>
+
+
+<input type='number' name='id_user' value='<?php echo $user[0]->id; ?>' hidden>
+
+<button class="btn btn-success"  name='acao' value='save'>ENVIAR</button>  <button class="btn btn-warning">CANCELAR</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

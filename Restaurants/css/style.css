@@ -1,0 +1,102 @@
+.logo
+{
+ text-align: center;
+}
+
+ul
+{
+ list-style-type: none;
+ background-color: rgba(255,255,255,0.3);
+ margin: 0;
+ margin: 0;
+}
+
+li
+{
+ float: left; 
+}
+
+li a
+{
+ display: block;
+ color: #464646;
+ padding: 14px 16px;
+ text-decoration: none;	
+}
+
+li a:hover
+{
+ color: #464646;
+ text-decoration: none;
+}
+
+
+#block_01
+{
+ background-color: #FFF0CA;
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+
+#block_02
+{
+ background-color: rgba(255,255,255,0.3);
+}
+
+#title
+{
+ text-align: center;	
+}
+
+.space
+{
+ padding-bottom: 26px;	
+}
+
+form.search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #E9CC7C;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.search button:hover {
+    background: #ECDAA7;
+}
+
+form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.restaurant
+{
+ border: dashed #FFE59B;
+ padding: 3px;
+}
+
+.footer
+{
+ text-align: center;
+ background-color: rgba(255,255,255,0.3);
+ display: block;
+ color: #464646;
+ padding: 18px;
+ text-decoration: none;
+ left: 10px;
+}

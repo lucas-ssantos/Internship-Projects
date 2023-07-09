@@ -1,0 +1,66 @@
+Por algum motivo apresenta um erro de Syntax dizendo :
+
+Uncaught SyntaxError: Unexpected token o in JSON at position 1
+  
+at JSON.parse (<anonymous>)
+    
+at (index):39
+
+(anonymous) @ (index):39
+
+ao tentar converter na tag script do index.html um JSON array em JavaScript Array
+
+testei este código (dentro da tag Script) no w3school e funcionou perfeitamente
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<label>Nome: </label><label id="nome"></label><br>
+<label>Rate: </label><label id="rate"></label><br><br>
+
+<label>Nome: </label><label id="nome2"></label><br>
+<label>Rate: </label><label id="rate2"></label><br><br>
+
+<label>Nome: </label><label id="nome3"></label><br>
+<label>Rate: </label><label id="rate3"></label>
+
+<script>
+
+var data = '{"restaurant":[' +
+'{"name":"Restaurante1", "cover":"", "distance":20, "rate":"XX" },' +
+'{"name":"Restaurante2","rate":"XXX" },' +
+'{"name":"Restaurante3","rate":"XXXX" }]}';
+
+
+obj = JSON.parse(data);
+
+
+document.getElementById("nome").innerHTML =
+obj.restaurant[0].name;
+
+document.getElementById("rate").innerHTML =
+obj.restaurant[0].rate;
+
+
+obj = JSON.parse(data);
+document.getElementById("nome2").innerHTML =
+obj.restaurant[1].name;
+
+document.getElementById("rate2").innerHTML =
+obj.restaurant[1].rate;
+
+
+obj = JSON.parse(data);
+document.getElementById("nome3").innerHTML =
+obj.restaurant[2].name;
+
+document.getElementById("rate3").innerHTML =
+obj.restaurant[2].rate;
+
+</script>
+
+</body>
+</html>
