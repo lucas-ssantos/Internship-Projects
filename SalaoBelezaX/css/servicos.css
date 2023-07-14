@@ -1,0 +1,22 @@
+.servicos
+{
+	background-color: white;
+	color: #141414;
+	text-align: center;
+}
+
+.card
+{
+	transition: 2s;
+}
+
+.card:hover
+{
+	color: #365ABD;
+	transition: 2s;
+}
+
+.card
+{
+	box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+}

@@ -1,0 +1,27 @@
+.row-section
+{
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+
+.row-title
+{
+	padding-top: 20px;
+}
+
+.row-elements
+{
+	padding-bottom: 30px;
+}
+
+.hr-title
+{
+	border-top: 5px solid #365ABD;
+	width: 50px;
+	padding-bottom: 30px;
+}
+
+.title
+{
+	font-family: "Barlow Condensed", sans-serif;
+}

@@ -1,0 +1,59 @@
+.intro
+{
+	height: 550px;
+	background-image: url('../img/salao3.jpg');
+}
+
+.intro-title
+{
+	font-family: "Sofia", sans-serif;
+	font-size: 100px;
+	color: white;
+	-webkit-text-stroke: 1px white;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	transition: 2s;
+}
+
+.intro-title:hover
+{
+	transition: 2s;
+	transform: scale(1.1);
+}
+
+.intro-slogan
+{
+	font-family: "Merienda", cursive;
+	font-size: 30px;
+	color: white;
+}
+
+.img-intro
+{
+	transition: 2s;
+	top: 100px;
+}
+
+.img-intro:hover
+{
+	transition: 2s;
+	transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.carousel-item
+{
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.info-banner-car
+{
+	
+	position: absolute;
+	z-index: 2;
+}

@@ -1,0 +1,23 @@
+.footer
+{
+	color: white;
+	background-color: black;
+	padding-top: 30px;
+}
+
+.copyright
+{
+	padding-top: 30px;
+}
+
+i
+{
+	color: white;
+	transition: 2s;
+}
+
+i:hover
+{
+	color: #365ABD;
+	transition: 2s;
+}
